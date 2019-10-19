@@ -2,7 +2,7 @@ let mountain_height = [7, 0, 2, 8, 3, 4, 7, 2,
   4, 8, 0, 11, 0, 0, 0, 3]
 let result = 0
 
-mountain_height = visualise(mountain_height)
+mountain_height = toTwoDimenArray(mountain_height)
 
 mountain_height.forEach(el => {
   result += getAmountOfWater(el)
@@ -10,7 +10,7 @@ mountain_height.forEach(el => {
 
 console.log(result)
 
-function visualise (arr) {
+function toTwoDimenArray (arr) {
   const max_height = Math.max.apply(null, arr)
   const visualised = []
   for (let i = max_height; i > 0; i--) {
